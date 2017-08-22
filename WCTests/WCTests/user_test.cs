@@ -1,16 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
 using NUnit.Framework;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Firefox;
 using OpenQA.Selenium.Support.UI;
-using System.Threading;
-using System.IO;
-using System.Net;
 using System.Data.SqlClient;
 namespace WCTests.Tests
 {
@@ -37,7 +30,6 @@ namespace WCTests.Tests
         [Test]
         public void login()
         {
-
             SqlConnection connection = new System.Data.SqlClient.SqlConnection("Server= localhost; Database= webconfigurator;Integrated Security = SSPI; ");
             connection.Open();
             String sql = "DELETE FROM dbo.UserAccountUserGroup WHERE UserID != 1";
